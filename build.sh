@@ -1,5 +1,5 @@
 #!/bin/bash
-cmake -B build && cmake --build build
+cmake -B build && cmake --build build &&
 
 if [[ -x ./build/GraphWars ]]; then
   echo "========== GraphWars Debug Console =========="
