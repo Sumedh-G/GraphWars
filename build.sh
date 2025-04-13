@@ -1,3 +1,8 @@
 #!/bin/bash
 cmake -B build && cmake --build build
-./build/GraphWars
+
+if [[ -x ./build/GraphWars ]]; then
+  echo "========== GraphWars Debug Console =========="
+  ./build/GraphWars
+  echo "============== Program Exited =============="
+fi
