@@ -3,7 +3,7 @@
 
 const float PLAYER_WIDTH = 40.0f;
 const float PLAYER_HEIGHT = 80.0f;
-const float GRAVITY = 200.0f;
+const float GRAVITY = 500.0f;
 
 Rectangle getPlayerBoundingBox(Player *p)
 {
