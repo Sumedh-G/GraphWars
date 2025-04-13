@@ -25,6 +25,7 @@ set(CMAKE_C_STANDARD 11)
 add_executable(${PROJECT_NAME}
   # Project files
   src/main.c
+  src/player.c
 )
 target_link_libraries(${PROJECT_NAME} raylib)
 

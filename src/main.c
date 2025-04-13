@@ -1,12 +1,17 @@
-#include <raylib.h>
-#include "constants.h"
+#include "raylib.h"
+#include "player.h"
 
-extern const int SCREEN_WIDTH, SCREEN_HEIGHT;
-extern const int TARGET_FPS;
+const int SCREEN_WIDTH = 1280;
+const int SCREEN_HEIGHT = 720;
+const int TARGET_FPS = 60;
 
 void drawBackground();
 
 int main() {
+
+  // Create a temporary dummy player
+  Vector2 start = { SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 2.0f };
+  Player player = { "test", start };
 
   // Initialise window for the game
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "GraphWars");
@@ -16,6 +21,7 @@ int main() {
   while (!WindowShouldClose()) {
     BeginDrawing();
       drawBackground();
+      drawPlayerFrame(&player);
     EndDrawing();
   }
 
@@ -27,6 +33,6 @@ int main() {
 
 void drawBackground()
 {
-  // make the background white (temporary)
-  ClearBackground(RAYWHITE);
+  // make the background black (temporary)
+  ClearBackground(BLACK);
 }

@@ -4,5 +4,11 @@
   "command": "/usr/bin/cc   -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/main.c.o -c /home/crownedhog/projects/GraphWars/src/main.c",
   "file": "/home/crownedhog/projects/GraphWars/src/main.c",
   "output": "CMakeFiles/GraphWars.dir/src/main.c.o"
+},
+{
+  "directory": "/home/crownedhog/projects/GraphWars/build",
+  "command": "/usr/bin/cc   -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/player.c.o -c /home/crownedhog/projects/GraphWars/src/player.c",
+  "file": "/home/crownedhog/projects/GraphWars/src/player.c",
+  "output": "CMakeFiles/GraphWars.dir/src/player.c.o"
 }
 ]
