@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/crownedhog/projects/GraphWars/src/grid.c" "CMakeFiles/GraphWars.dir/src/grid.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/grid.c.o.d"
   "/home/crownedhog/projects/GraphWars/src/main.c" "CMakeFiles/GraphWars.dir/src/main.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/main.c.o.d"
   "/home/crownedhog/projects/GraphWars/src/player.c" "CMakeFiles/GraphWars.dir/src/player.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/player.c.o.d"
   "" "GraphWars" "gcc" "CMakeFiles/GraphWars.dir/link.d"

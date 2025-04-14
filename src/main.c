@@ -1,5 +1,4 @@
 #include "raylib.h"
-#include "grid.h"
 #include "player.h"
 #include <stddef.h>
 
@@ -25,9 +24,8 @@ int main() {
     // Player Mechanics
     dt = GetFrameTime();
     movePlayer(&player);
-    updatePlayer(&player, dt);
+    // updatePlayer(&player, dt);
     updateGrid(&player);
-
 
     BeginDrawing();
       drawBackground();
