@@ -1,5 +1,7 @@
 #include "raylib.h"
+#include "grid.h"
 #include "player.h"
+#include <stddef.h>
 
 const int SCREEN_WIDTH = 1280;
 const int SCREEN_HEIGHT = 720;
@@ -9,10 +11,9 @@ void drawBackground();
 
 int main() {
 
-  // Create a temporary dummy player
-  Vector2 startPos = { SCREEN_WIDTH / 2.0f, SCREEN_HEIGHT / 2.0f };
-  Vector2 startVel = { 0.0f, 0.0f };
-  Player player = { "test", startPos, startVel };
+  // temporary player
+  Vector2 startPos = { SCREEN_WIDTH/2.0f, SCREEN_HEIGHT/2.0f };
+  Player player = { "Main", startPos, {0.0f, 0.0f }, { startPos, 5 }};
 
   // Initialise window for the game
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "GraphWars");
@@ -25,9 +26,12 @@ int main() {
     dt = GetFrameTime();
     movePlayer(&player);
     updatePlayer(&player, dt);
+    updateGrid(&player);
+
 
     BeginDrawing();
       drawBackground();
+      blitGrid(&player.currentGrid);
       drawPlayerFrame(&player);
     EndDrawing();
   }

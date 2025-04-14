@@ -26,6 +26,7 @@ add_executable(${PROJECT_NAME}
   # Project files
   src/main.c
   src/player.c
+  src/grid.c
 )
 target_link_libraries(${PROJECT_NAME} raylib)
 

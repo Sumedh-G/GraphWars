@@ -30,3 +30,9 @@ void movePlayer(Player *p)
   else if (IsKeyDown(KEY_D)) p->speed.x = 100;
   else p->speed.x = 0;
 }
+
+void updateGrid(Player *player)
+{
+  if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) player->currentGrid.origin = GetMousePosition();
+  else player->currentGrid.origin = player->position;
+}

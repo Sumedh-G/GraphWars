@@ -129,6 +129,30 @@ GraphWars/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/build
 .PHONY : GraphWars/fast
 
+src/grid.o: src/grid.c.o
+.PHONY : src/grid.o
+
+# target to build an object file
+src/grid.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/grid.c.o
+.PHONY : src/grid.c.o
+
+src/grid.i: src/grid.c.i
+.PHONY : src/grid.i
+
+# target to preprocess a source file
+src/grid.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/grid.c.i
+.PHONY : src/grid.c.i
+
+src/grid.s: src/grid.c.s
+.PHONY : src/grid.s
+
+# target to generate assembly for a file
+src/grid.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/grid.c.s
+.PHONY : src/grid.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GraphWars"
+	@echo "... src/grid.o"
+	@echo "... src/grid.i"
+	@echo "... src/grid.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
