@@ -26,8 +26,9 @@ add_executable(${PROJECT_NAME}
   # Project files
   src/main.c
   src/player.c
+  src/functions.c
 )
-target_link_libraries(${PROJECT_NAME} raylib)
+target_link_libraries(${PROJECT_NAME} raylib m)
 
 if (APPLE)
     target_link_libraries(${PROJECT_NAME} "-framework IOKit")

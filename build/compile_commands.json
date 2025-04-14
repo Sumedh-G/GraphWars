@@ -10,5 +10,11 @@
   "command": "/usr/bin/cc   -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/player.c.o -c /home/crownedhog/projects/GraphWars/src/player.c",
   "file": "/home/crownedhog/projects/GraphWars/src/player.c",
   "output": "CMakeFiles/GraphWars.dir/src/player.c.o"
+},
+{
+  "directory": "/home/crownedhog/projects/GraphWars/build",
+  "command": "/usr/bin/cc   -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/functions.c.o -c /home/crownedhog/projects/GraphWars/src/functions.c",
+  "file": "/home/crownedhog/projects/GraphWars/src/functions.c",
+  "output": "CMakeFiles/GraphWars.dir/src/functions.c.o"
 }
 ]

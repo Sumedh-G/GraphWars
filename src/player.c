@@ -4,10 +4,13 @@
 const float PLAYER_WIDTH = 40.0f;
 const float PLAYER_HEIGHT = 80.0f;
 const float GRAVITY = 500.0f;
+
 const int GRID_SPACING = 20;
 const int MAJOR_GRID_SPACING = 50;
 const int MAX_GRID_SIZE = (6 * MAJOR_GRID_SPACING) / GRID_SPACING;
 const float SCALE_SENSITIVITY = 1.0f;
+
+const float FUNCTION_RESOLUTION = 0.1;
 
 Rectangle getPlayerBoundingBox(Player *p)
 {
@@ -22,22 +25,32 @@ void drawPlayerFrame(Player *p)
 
 void updatePlayer(Player *p, float dt)
 {
-  p->speed.y += GRAVITY * dt;
+  // p->speed.y += GRAVITY * dt;
   p->position.x += p->speed.x * dt;
   p->position.y += p->speed.y * dt;
 }
 
 void movePlayer(Player *p)
 {
-  // TODO : Convert to switch case
-  if (IsKeyDown(KEY_A)) p->speed.x = -100;
-  else if (IsKeyDown(KEY_D)) p->speed.x = 100;
-  else p->speed.x = 0;
+  int key = GetKeyPressed();
+    do {
+    switch (key) {
+      case KEY_A:
+        p->speed.x = -200;
+        break;
+      case KEY_D:
+        p->speed.x = 200;
+        break;
+    }
+  } while ((key = GetKeyPressed()));
+
+  if (p->speed.x) {
+    if (IsKeyUp(KEY_A) && IsKeyUp(KEY_D)) p->speed.x = 0;
+  }
 }
 
 void updateGrid(Player *player)
 {
-  float scale;
   if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) player->currentGrid.origin = GetMousePosition();
   else {
     player->currentGrid.origin.x = player->position.x + PLAYER_WIDTH/2.0f;
@@ -45,6 +58,7 @@ void updateGrid(Player *player)
   }
 
   if (player->currentGrid.size < 0) { player->currentGrid.size = 0; return; }
+  float scale;
   if ((scale = GetMouseWheelMove()) != 0) {
     int increment = player->currentGrid.size + (int)(SCALE_SENSITIVITY * scale);
     player->currentGrid.size = ( increment > MAX_GRID_SIZE) ? MAX_GRID_SIZE : increment;
@@ -71,3 +85,18 @@ void blitGrid(Grid *grid)
   }
 }
 
+void drawFunction(Grid *grid, float (*function)(float), Color linecolor)
+{
+  int step;
+  for (int x=-grid->size * GRID_SPACING; x < grid->size * GRID_SPACING; x += (step = GRID_SPACING * FUNCTION_RESOLUTION)) {
+    if (function(x+step) < grid->size * GRID_SPACING) {
+      DrawLine(
+        grid->origin.x + x,
+        grid->origin.y - function(x),
+        grid->origin.x + x + 1,
+        grid->origin.y - function(x + step),
+        linecolor
+      );
+    }
+  }
+}

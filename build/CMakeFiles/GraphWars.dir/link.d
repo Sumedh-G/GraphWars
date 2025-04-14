@@ -4,7 +4,13 @@ GraphWars: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
   CMakeFiles/GraphWars.dir/src/main.c.o \
   CMakeFiles/GraphWars.dir/src/player.c.o \
+  CMakeFiles/GraphWars.dir/src/functions.c.o \
   /usr/lib/libraylib.so \
+  /usr/lib/libm.so \
+  /usr/lib/libm.so \
+  /usr/lib/libm.so \
+  /usr/lib/libm.so.6 \
+  /usr/lib/libmvec.so.1 \
   /usr/lib/libraylib.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/libgcc.a \
   /usr/lib/libgcc_s.so \
@@ -26,7 +32,6 @@ GraphWars: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/libgcc.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crtn.o \
-  /usr/lib/libm.so.6 \
   /usr/lib/libgcc_s.so.1 \
   /usr/lib/ld-linux-x86-64.so.2
 
@@ -40,7 +45,19 @@ CMakeFiles/GraphWars.dir/src/main.c.o:
 
 CMakeFiles/GraphWars.dir/src/player.c.o:
 
+CMakeFiles/GraphWars.dir/src/functions.c.o:
+
 /usr/lib/libraylib.so:
+
+/usr/lib/libm.so:
+
+/usr/lib/libm.so:
+
+/usr/lib/libm.so:
+
+/usr/lib/libm.so.6:
+
+/usr/lib/libmvec.so.1:
 
 /usr/lib/libraylib.so:
 
@@ -83,8 +100,6 @@ CMakeFiles/GraphWars.dir/src/player.c.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crtn.o:
-
-/usr/lib/libm.so.6:
 
 /usr/lib/libgcc_s.so.1:
 

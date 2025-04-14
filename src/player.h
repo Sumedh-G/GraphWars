@@ -21,3 +21,4 @@ void movePlayer(Player *p);
 
 void updateGrid(Player *player);
 void blitGrid(Grid *grid);
+void drawFunction(Grid *grid, float (*function)(float), Color linecolor);
