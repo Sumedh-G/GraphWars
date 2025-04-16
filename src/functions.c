@@ -12,6 +12,44 @@
 // Nice would-haves
 // -> Create a chunking system that only renders functions which are visible
 
+int StrToSymbols(char infixExpr[], Symbol output[], int n)
+{
+  float cnumber = 0;
+  int isDecimal = 0;
+  int ddeg = 0;
+  int symbolCount = 0;
+  for (int i=0;infixExpr[i]; i++) {
+    if (infixExpr[i] >= '0' && infixExpr[i] <= '9') {
+      cnumber = (isDecimal) ? cnumber + infixExpr[i] - '0' * pow(10, -ddeg++) : cnumber * 10 + infixExpr[i] - '0';
+    }
+    else {
+      if ((isDecimal = (infixExpr[i] == '.')) == 1) continue;
+      if (cnumber) {
+        output[symbolCount].type = 'n';
+        output[symbolCount].data.value = cnumber;
+        isDecimal = ddeg = cnumber = 0;
+        ++symbolCount;
+      }
+
+      switch (infixExpr[i]) {
+        case 'x': case 'y': output[symbolCount].type = 'v'; break;
+        case '(':           output[symbolCount].type = 'b'; break;
+        case ')':           output[symbolCount].type = 'B'; break;
+        default:            output[symbolCount].type = 'o'; break;
+      }
+      output[symbolCount].data.op = infixExpr[i];
+      ++symbolCount;
+    }
+  }
+  if (cnumber) {
+    output[symbolCount].type = 'n';
+    output[symbolCount].data.value = cnumber;
+    isDecimal = ddeg = 0;
+    ++symbolCount;
+  }
+  return symbolCount;
+}
+
 int getPrecedence(char op)
 {
   switch (op) {
@@ -30,7 +68,7 @@ float getOut(char op, float in1, float in2)
     case '*': return in1 * in2;
     case '/': return (in2) ? in1 / in2 : 0.0f;
     case '%': return (in2) ? (int)in1 % (int)in2 : 0.0f;
-    case '^': return powf(in1, in2);
+    case '^': return pow(in1, in2);
     default: return 0.0f;
   }
 }
@@ -50,26 +88,27 @@ float evalExpression(Symbol expr[], int n, Var vars[], int m)
   for (int i=0; i<n; ++i) {
     switch (expr[i].type) {
       case 'b':   // open brackets
-        *topOp++ = expr[i].data.op;
+        *(++topOp) = 'b';
         break;
       case 'B':   // close brackets
         while (*topOp != 'b') {
           if (topOp == operators) {
             return 0.0f;      // if close brace is unmatched
           }
-          in2 = *topNum--;
-          in1 = *topNum;
+          in2 = *(--topNum);
+          in1 = *(--topNum);
           currOp = *topOp--;
           *topNum++ = getOut(currOp, in1, in2);
         }
+        --topOp;
         break;
       case 'n':
         *topNum++ = expr[i].data.value;
         break;
       case 'o':
         while (getPrecedence(expr[i].data.op) < getPrecedence(*topOp)) {
-          in2 = *topNum--;
-          in1 = *topNum;
+          in2 = *(--topNum);
+          in1 = *(--topNum);
           currOp = *topOp--;
           *topNum++ = getOut(currOp, in1, in2);
         }
@@ -87,9 +126,10 @@ float evalExpression(Symbol expr[], int n, Var vars[], int m)
         break;
     }
   }
-  while (topOp != operators) {
+  while (topOp > operators) {
     if (*topOp == 'b') {
       --topOp;
+      continue;
     }
     in2 = *(--topNum);
     in1 = *(--topNum);

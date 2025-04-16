@@ -16,3 +16,4 @@ typedef struct Symbol {
 int getPrecedence(char op);
 float getOut(char op, float in1, float in2);
 float evalExpression(Symbol expr[], int n, Var vars[], int m);
+int StrToSymbols(char infixExpr[], Symbol output[], int n);
