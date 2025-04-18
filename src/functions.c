@@ -54,8 +54,7 @@ double ShuntingYard(Symbol expression[], int expressionLength, Variable variable
   Symbol *fStackPtr = fStack;
 
   char startingBracket[8] = {0};
-  for (int i=0, j=0; i < expressionLength; ++i) {
-
+  for (int i=0, j=0, inValidVar; i < expressionLength; ++i) {
     switch (expression[i].type) {
       case 'n':
         *numStackPtr++ = expression[i].contents.value;
@@ -72,12 +71,15 @@ double ShuntingYard(Symbol expression[], int expressionLength, Variable variable
         break;
 
       case 'v':
+        inValidVar = 1;
         for (j=0; j<variablesLength; ++j) {
           if (strncmp(variables[j].name, expression[i].contents.name, 8) == 0) {
             *numStackPtr++ = variables[j].value;
+            inValidVar = 0;
             break;
           }
         }
+        if (inValidVar) *numStackPtr++ = 0.00;
         break;
 
       case 'b':
