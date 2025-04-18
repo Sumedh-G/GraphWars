@@ -1,19 +1,14 @@
 #pragma once
 
-typedef struct Var {
-  char name;
-  float value;
-} Var;
-
 typedef struct Symbol {
-  union {
-    float value;
-    char op;
-  } data;
   char type;
+  union {
+    double value;
+    char name[8];
+  } data;
 } Symbol;
 
-int getPrecedence(char op);
-float getOut(char op, float in1, float in2);
-float evalExpression(Symbol expr[], int n, Var vars[], int m);
-int StrToSymbols(char infixExpr[], Symbol output[], int n);
+
+int StrToSymbols(char stringExpression[], Symbol outputBuffer[], int n);
+Symbol ParseSnippet(char snip[8], char type);
+char TypeOf(char inp);
