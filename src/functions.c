@@ -1,8 +1,18 @@
+#include <float.h>
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
 #include "functions.h"
 
+// function hash definitions
+#define SIN      7235955
+#define COS      7565155
+#define TAN      7233908
+#define COSEC    426903826275
+#define SEC      6514035
+#define COT      7630691
+#define NEG      126
+// end
 
 int StrToSymbols(char stringExpression[], Symbol outputBuffer[], int expressionLength)
 {
@@ -14,21 +24,31 @@ int StrToSymbols(char stringExpression[], Symbol outputBuffer[], int expressionL
   *outputBuffer++ = (Symbol) { .type = 'b', .contents.name = '(' };
 
   char charType;
+  int nBrackets[6];
   for (int i=0; i<expressionLength; ++i) {
     if (snipPtr-snippet > 7) return -1;
     if (!stringExpression[i]) {
       *outputBuffer++ = ParseSnippet(snippet, type);
       *outputBuffer++ = (Symbol) { .type = 'B', .contents.name = ')' };
+      if (!(nBrackets[0] == nBrackets[3] && nBrackets[1] == nBrackets[4] && nBrackets[2] == nBrackets[5] )) return -1;
       return (count+2);
     }
     if (stringExpression[i] == ' ' || stringExpression[i] == '\n') continue;
 
-    if ((charType = TypeOf(stringExpression[i])) == type) {
+    if ((charType = TypeOf(stringExpression[i])) == type && !(type == 'b' || type == 'B')) {
       if (type == 'F') return -1;
       *snipPtr++ = stringExpression[i];
     }
     else {
       if (charType == 'F' && type == 'b') return -1;
+      switch (stringExpression[i-1]) {
+        case '(': ++nBrackets[0]; break;
+        case '[': ++nBrackets[1]; break;
+        case '{': ++nBrackets[2]; break;
+        case ')': ++nBrackets[3]; break;
+        case ']': ++nBrackets[4]; break;
+        case '}': ++nBrackets[5]; break;
+      }
 
       *outputBuffer++ = ParseSnippet(snippet, type);
       type = charType;
@@ -39,6 +59,7 @@ int StrToSymbols(char stringExpression[], Symbol outputBuffer[], int expressionL
     }
   }
 
+  if (!(nBrackets[0] == nBrackets[3] && nBrackets[1] == nBrackets[4] && nBrackets[2] == nBrackets[5] )) return -1;
   *outputBuffer++ = (Symbol) { .type = 'B', .contents.name = ')' };
   return (count+1);
 }
@@ -54,7 +75,8 @@ double ShuntingYard(Symbol expression[], int expressionLength, Variable variable
   Symbol *fStackPtr = fStack;
 
   char startingBracket[8] = {0};
-  for (int i=0, j=0, inValidVar; i < expressionLength; ++i) {
+  for (int i=0, j=0, invalidVar; i < expressionLength; ++i) {
+
     switch (expression[i].type) {
       case 'n':
         *numStackPtr++ = expression[i].contents.value;
@@ -71,15 +93,15 @@ double ShuntingYard(Symbol expression[], int expressionLength, Variable variable
         break;
 
       case 'v':
-        inValidVar = 1;
+        invalidVar = 1;
         for (j=0; j<variablesLength; ++j) {
           if (strncmp(variables[j].name, expression[i].contents.name, 8) == 0) {
             *numStackPtr++ = variables[j].value;
-            inValidVar = 0;
+            invalidVar = 0;
             break;
           }
         }
-        if (inValidVar) *numStackPtr++ = 0.00;
+        if (invalidVar) *numStackPtr++ = 0.00;
         break;
 
       case 'b':
@@ -139,8 +161,20 @@ char TypeOf(char inp)
 void EvaluateFunction(Symbol function, double **argumentStackPtrPtr)
 {
   double arg1, arg2;
+  long long *encodedFunc;
   switch (function.type) {
     case 'f':
+      encodedFunc = (long long *) function.contents.name;
+      arg1 = *--*argumentStackPtrPtr;
+      switch (*encodedFunc) {
+        case SIN:   *(*argumentStackPtrPtr)++ = sin(arg1); break;
+        case COS:   *(*argumentStackPtrPtr)++ = cos(arg1); break;
+        case TAN:   *(*argumentStackPtrPtr)++ = (cos(arg1)) ? tan(arg1) : DBL_MAX; break;
+        case COSEC: *(*argumentStackPtrPtr)++ = (sin(arg1)) ? 1.00 / sin(arg1) : DBL_MAX; break;
+        case SEC:   *(*argumentStackPtrPtr)++ = (cos(arg1)) ? 1.00 / cos(arg1) : DBL_MAX; break;
+        case COT:   *(*argumentStackPtrPtr)++ = (sin(arg1)) ? 1.00 / sin(arg1) : DBL_MAX; break;
+        case NEG:   *(*argumentStackPtrPtr)++ = -1.0 * arg1; break;
+      }
       return;
 
     case 'F':
@@ -151,8 +185,8 @@ void EvaluateFunction(Symbol function, double **argumentStackPtrPtr)
         case '-': *(*argumentStackPtrPtr)++ = arg1 - arg2; break;
         case '*': *(*argumentStackPtrPtr)++ = arg1 * arg2; break;
         case '^': *(*argumentStackPtrPtr)++ = pow(arg1, arg2); break;
-        case '/': if (arg2) *(*argumentStackPtrPtr)++ = arg1 / arg2; break;
-        case '%': if ((int)arg2) *(*argumentStackPtrPtr)++ = (float)((int)arg1 % (int)arg2); break;
+        case '/': *(*argumentStackPtrPtr)++ = (arg2) ? arg1 / arg2 : DBL_MAX; break;
+        case '%': *(*argumentStackPtrPtr)++ = (arg2) ? (float)((int)arg1 % (int)arg2) : 0; break;
       }
       return;
 
@@ -163,7 +197,9 @@ void EvaluateFunction(Symbol function, double **argumentStackPtrPtr)
 
 int Precedence(Symbol function)
 {
-  if (function.type == 'f' || function.type == 'b') return 0;
+  if (function.type == 'b') return 0;
+  if (function.type == 'B') return 127;   // Will never be acessed
+  if (function.type == 'f') return 126;
   switch (function.contents.name[0]) {
     case '+': case '-': return 1;
     case '*': case '/': case '%': return 2;
