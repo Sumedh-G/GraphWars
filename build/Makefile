@@ -129,6 +129,30 @@ GraphWars/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/build
 .PHONY : GraphWars/fast
 
+src/entity.o: src/entity.c.o
+.PHONY : src/entity.o
+
+# target to build an object file
+src/entity.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/entity.c.o
+.PHONY : src/entity.c.o
+
+src/entity.i: src/entity.c.i
+.PHONY : src/entity.i
+
+# target to preprocess a source file
+src/entity.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/entity.c.i
+.PHONY : src/entity.c.i
+
+src/entity.s: src/entity.c.s
+.PHONY : src/entity.s
+
+# target to generate assembly for a file
+src/entity.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/entity.c.s
+.PHONY : src/entity.c.s
+
 src/functions.o: src/functions.c.o
 .PHONY : src/functions.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GraphWars"
+	@echo "... src/entity.o"
+	@echo "... src/entity.i"
+	@echo "... src/entity.s"
 	@echo "... src/functions.o"
 	@echo "... src/functions.i"
 	@echo "... src/functions.s"

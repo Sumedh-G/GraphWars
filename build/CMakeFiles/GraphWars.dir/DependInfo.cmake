@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/crownedhog/projects/GraphWars/src/entity.c" "CMakeFiles/GraphWars.dir/src/entity.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/entity.c.o.d"
   "/home/crownedhog/projects/GraphWars/src/functions.c" "CMakeFiles/GraphWars.dir/src/functions.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/functions.c.o.d"
   "/home/crownedhog/projects/GraphWars/src/main.c" "CMakeFiles/GraphWars.dir/src/main.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/main.c.o.d"
   "" "GraphWars" "gcc" "CMakeFiles/GraphWars.dir/link.d"
