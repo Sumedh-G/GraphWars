@@ -3,7 +3,6 @@ GraphWars: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
   CMakeFiles/GraphWars.dir/src/main.c.o \
-  CMakeFiles/GraphWars.dir/src/player.c.o \
   CMakeFiles/GraphWars.dir/src/functions.c.o \
   /usr/lib/libraylib.so \
   /usr/lib/libm.so \
@@ -42,8 +41,6 @@ GraphWars: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o:
 
 CMakeFiles/GraphWars.dir/src/main.c.o:
-
-CMakeFiles/GraphWars.dir/src/player.c.o:
 
 CMakeFiles/GraphWars.dir/src/functions.c.o:
 
