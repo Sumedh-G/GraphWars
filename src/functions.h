@@ -1,5 +1,8 @@
 #pragma once
 
+// This is 16 bytes because of padding smh
+// Should probably do something to take care of symbols
+// and variables under the same struct later
 typedef struct Symbol {
   char type;
   union data {
