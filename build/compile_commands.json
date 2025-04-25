@@ -16,5 +16,17 @@
   "command": "/usr/bin/cc   -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/functions.c.o -c /home/crownedhog/projects/GraphWars/src/functions.c",
   "file": "/home/crownedhog/projects/GraphWars/src/functions.c",
   "output": "CMakeFiles/GraphWars.dir/src/functions.c.o"
+},
+{
+  "directory": "/home/crownedhog/projects/GraphWars/build",
+  "command": "/usr/bin/cc   -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/utils.c.o -c /home/crownedhog/projects/GraphWars/src/utils.c",
+  "file": "/home/crownedhog/projects/GraphWars/src/utils.c",
+  "output": "CMakeFiles/GraphWars.dir/src/utils.c.o"
+},
+{
+  "directory": "/home/crownedhog/projects/GraphWars/build",
+  "command": "/usr/bin/cc   -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/tiles.c.o -c /home/crownedhog/projects/GraphWars/src/tiles.c",
+  "file": "/home/crownedhog/projects/GraphWars/src/tiles.c",
+  "output": "CMakeFiles/GraphWars.dir/src/tiles.c.o"
 }
 ]

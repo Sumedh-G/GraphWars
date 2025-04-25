@@ -27,6 +27,8 @@ add_executable(${PROJECT_NAME}
   src/main.c
   src/entity.c
   src/functions.c
+  src/utils.c
+  src/tiles.c
 )
 target_link_libraries(${PROJECT_NAME} raylib m)
 

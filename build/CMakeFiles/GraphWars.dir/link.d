@@ -5,6 +5,8 @@ GraphWars: \
   CMakeFiles/GraphWars.dir/src/main.c.o \
   CMakeFiles/GraphWars.dir/src/entity.c.o \
   CMakeFiles/GraphWars.dir/src/functions.c.o \
+  CMakeFiles/GraphWars.dir/src/utils.c.o \
+  CMakeFiles/GraphWars.dir/src/tiles.c.o \
   /usr/lib/libraylib.so \
   /usr/lib/libm.so \
   /usr/lib/libm.so \
@@ -46,6 +48,10 @@ CMakeFiles/GraphWars.dir/src/main.c.o:
 CMakeFiles/GraphWars.dir/src/entity.c.o:
 
 CMakeFiles/GraphWars.dir/src/functions.c.o:
+
+CMakeFiles/GraphWars.dir/src/utils.c.o:
+
+CMakeFiles/GraphWars.dir/src/tiles.c.o:
 
 /usr/lib/libraylib.so:
 

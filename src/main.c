@@ -1,11 +1,16 @@
 #include "raylib.h"
 #include "entity.h"
+#include "utils.h"
+#include "tiles.h"
 
 // standard for 16 bit pixel art
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
+#define SCALE 2
 
 #define TARGET_FPS 60
+
+#define SS_BLOCKS_PATH "./data/assets/blocks/default.png"
 
 void handleInput(int movement[2])
 {
@@ -31,25 +36,28 @@ int main() {
 
   PhysicsEntity player = {
     .type = "player",
-    .position = (Vector2) { 50, 10 },
+    .position = (Vector2) { 100, 200 },
     .velocity = (Vector2) { 0, 0 },
-    .acceleration = (Vector2) { 0, 0 },
+    .acceleration = (Vector2) { 0, -0.1 },
     .size = (Vector2) { 16, 32 }
   };
 
-  RenderTexture2D display = LoadRenderTexture(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
+  // Spritesheets
+  Image blocktiles = LoadImage(SS_BLOCKS_PATH);
+  // Screen to blit onto
+  RenderTexture2D display = LoadRenderTexture(SCREEN_WIDTH / SCALE, SCREEN_HEIGHT / SCALE);
 
   while (!WindowShouldClose()) {
 
     BeginTextureMode(display);
-    ClearBackground(GRAY);
+    ClearBackground(DARKGRAY);
     RenderPhysicsEntity(&player);
     EndTextureMode();
 
     BeginDrawing();
     DrawTexturePro(
       display.texture,
-      (Rectangle) { 0.0, 0.0, SCREEN_WIDTH / 2.0, SCREEN_HEIGHT / 2.0 },
+      (Rectangle) { 0.0, 0.0, (float) SCREEN_WIDTH / SCALE, (float) SCREEN_HEIGHT / SCALE },
       (Rectangle) { 0.0, 0.0, SCREEN_WIDTH, SCREEN_HEIGHT },
       (Vector2) { 0, 0 },
       0.0,

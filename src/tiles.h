@@ -1,14 +1,13 @@
-
+#pragma once
 #include <raylib.h>
 
-typedef struct GridTile {
-  int position[2];
-  char name[8];
-  char variant[4];
-} GridTile;
+typedef struct Block {
+  int worldPos[2];
+  int spritePos[2];
+} Block;
 
 typedef struct Decor {
-  Vector2 position;
-  char name[8];
-  char variant[4];
+  int worldPos[2];
+  int spritePos[2];
+  int spriteSize[2];
 } Decor;

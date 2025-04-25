@@ -1,1 +1,1 @@
-/usr/bin/cc -Wl,--dependency-file=CMakeFiles/GraphWars.dir/link.d CMakeFiles/GraphWars.dir/src/main.c.o CMakeFiles/GraphWars.dir/src/entity.c.o CMakeFiles/GraphWars.dir/src/functions.c.o -o GraphWars  /usr/lib/libraylib.so -lm -L/usr/lib -lraylib
+/usr/bin/cc -Wl,--dependency-file=CMakeFiles/GraphWars.dir/link.d CMakeFiles/GraphWars.dir/src/main.c.o CMakeFiles/GraphWars.dir/src/entity.c.o CMakeFiles/GraphWars.dir/src/functions.c.o CMakeFiles/GraphWars.dir/src/utils.c.o CMakeFiles/GraphWars.dir/src/tiles.c.o -o GraphWars  /usr/lib/libraylib.so -lm -L/usr/lib -lraylib

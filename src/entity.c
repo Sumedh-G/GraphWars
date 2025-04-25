@@ -1,5 +1,7 @@
+#include "raylib.h"
 #include "entity.h"
-#include <raylib.h>
+
+#define TERMINAL_VELOCITY 5
 
 void UpdatePhysicsEntity(PhysicsEntity* entity, Vector2* inputMovement, float dt)
 {
@@ -10,7 +12,7 @@ void UpdatePhysicsEntity(PhysicsEntity* entity, Vector2* inputMovement, float dt
 
   // movement in y direction
   entity->position.y += frameMovement.y * dt;
-  entity->velocity.y += entity->acceleration.x * dt;
+  entity->velocity.y = (entity->velocity.y < TERMINAL_VELOCITY) ? entity->velocity.y + entity->acceleration.y * dt : TERMINAL_VELOCITY;
 }
 
 void RenderPhysicsEntity(PhysicsEntity* entity)

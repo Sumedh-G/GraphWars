@@ -71,6 +71,19 @@ CMakeFiles/GraphWars.dir/src/functions.c.o: /home/crownedhog/projects/GraphWars/
 
 CMakeFiles/GraphWars.dir/src/main.c.o: /home/crownedhog/projects/GraphWars/src/main.c \
   /home/crownedhog/projects/GraphWars/src/entity.h \
+  /home/crownedhog/projects/GraphWars/src/tiles.h \
+  /home/crownedhog/projects/GraphWars/src/utils.h \
+  /usr/include/raylib.h \
+  /usr/include/stdc-predef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h
+
+CMakeFiles/GraphWars.dir/src/tiles.c.o: /home/crownedhog/projects/GraphWars/src/tiles.c \
+  /usr/include/stdc-predef.h
+
+CMakeFiles/GraphWars.dir/src/utils.c.o: /home/crownedhog/projects/GraphWars/src/utils.c \
+  /home/crownedhog/projects/GraphWars/src/tiles.h \
+  /home/crownedhog/projects/GraphWars/src/utils.h \
   /usr/include/raylib.h \
   /usr/include/stdc-predef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
@@ -94,8 +107,14 @@ GraphWars: /usr/lib/Scrt1.o \
   /usr/lib/libraylib.so \
   CMakeFiles/GraphWars.dir/src/entity.c.o \
   CMakeFiles/GraphWars.dir/src/functions.c.o \
-  CMakeFiles/GraphWars.dir/src/main.c.o
+  CMakeFiles/GraphWars.dir/src/main.c.o \
+  CMakeFiles/GraphWars.dir/src/tiles.c.o \
+  CMakeFiles/GraphWars.dir/src/utils.c.o
 
+
+CMakeFiles/GraphWars.dir/src/utils.c.o:
+
+CMakeFiles/GraphWars.dir/src/tiles.c.o:
 
 CMakeFiles/GraphWars.dir/src/entity.c.o:
 
@@ -120,6 +139,10 @@ CMakeFiles/GraphWars.dir/src/entity.c.o:
 /usr/lib/crti.o:
 
 /usr/lib/Scrt1.o:
+
+/home/crownedhog/projects/GraphWars/src/utils.c:
+
+/home/crownedhog/projects/GraphWars/src/tiles.c:
 
 /usr/include/sys/types.h:
 
@@ -231,11 +254,15 @@ CMakeFiles/GraphWars.dir/src/functions.c.o:
 
 /usr/include/bits/types.h:
 
+/home/crownedhog/projects/GraphWars/src/tiles.h:
+
 /usr/include/bits/atomic_wide_counter.h:
 
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/types/locale_t.h:
+
+/home/crownedhog/projects/GraphWars/src/utils.h:
 
 /usr/include/bits/types/struct_timespec.h:
 
