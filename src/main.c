@@ -22,31 +22,6 @@ int main() {
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "GraphWars");
   SetTargetFPS(TARGET_FPS);
 
-  /*
-    * Think of the screen as a image
-    * We load this image onto the GPU as a texture, and draw
-    * elements of the game onto it.
-    *
-    * This texture is then scaled up and blitted to the screen once per frame,
-    * making it incredibly efficient since only 1 image is loaded into memory
-    * regardless of the number of entities to be drawn onto the screen.
-    *
-    * Each entity needs to be loaded onto the gpu only once during its creation,
-    * and post-processing effects using shaders also become easy to do. loading images
-    * also becomes vastly simpler
-    *
-    * physics for bodies can be offloaded to computations done upon their bounding boxes.
-    *
-    * TODO:
-    *
-    * 1) after creating a screen texture, create a function that renders onto the screen
-    *   using game variables
-    *
-    * 2) allow for post-processing by using data offloaded to the GPU
-    *
-    * 3) Bring back final screen and blit it once per frame
-  */
-
   // Clock
   float dt;
 
@@ -56,25 +31,40 @@ int main() {
 
   PhysicsEntity player = {
     .type = "player",
-    .position = (Vector2) { 100, 200 },
+    .position = (Vector2) { 50, 10 },
     .velocity = (Vector2) { 0, 0 },
     .acceleration = (Vector2) { 0, 0 },
-    .size = (Vector2) { 50, 100 }
+    .size = (Vector2) { 16, 32 }
   };
+
+  RenderTexture2D display = LoadRenderTexture(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
 
   while (!WindowShouldClose()) {
 
+    BeginTextureMode(display);
+    ClearBackground(GRAY);
+    RenderPhysicsEntity(&player);
+    EndTextureMode();
+
     BeginDrawing();
-    ClearBackground(BLACK);
-    RenderPhysicsEntity(&player);       // blit this onto a screen rather than directly
+    DrawTexturePro(
+      display.texture,
+      (Rectangle) { 0.0, 0.0, SCREEN_WIDTH / 2.0, SCREEN_HEIGHT / 2.0 },
+      (Rectangle) { 0.0, 0.0, SCREEN_WIDTH, SCREEN_HEIGHT },
+      (Vector2) { 0, 0 },
+      0.0,
+      WHITE
+    );
     EndDrawing();
 
     handleInput(movementx);
-    inputMovement.x = movementx[1] - movementx[0];
+    inputMovement.x = 5 * (movementx[1] - movementx[0]);
 
     dt = GetFrameTime() * TARGET_FPS;
     UpdatePhysicsEntity(&player, &inputMovement, dt);
   }
+
+  UnloadRenderTexture(display);
 
   CloseWindow();
   return 0;
