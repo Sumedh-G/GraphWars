@@ -22,6 +22,10 @@ endif()
 
 set(CMAKE_C_STANDARD 11)
 
+add_definitions(
+  -DBASE_PATH=\"${CMAKE_SOURCE_DIR}\"
+)
+
 add_executable(${PROJECT_NAME}
   # Project files
   src/main.c

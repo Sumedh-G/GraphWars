@@ -10,7 +10,7 @@
 
 #define TARGET_FPS 60
 
-#define SS_BLOCKS_PATH "./data/assets/blocks/default.png"
+#define SS_BLOCKS_PATH BASE_PATH "/data/assets/blocks/default.png"
 
 void handleInput(int movement[2])
 {

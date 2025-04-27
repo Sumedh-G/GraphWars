@@ -101,7 +101,7 @@ double ShuntingYard(Symbol expression[], int expressionLength, Variable variable
             break;
           }
         }
-        if (invalidVar) *numStackPtr++ = 0.00;
+        if (invalidVar) *numStackPtr++ = 0.00; // If variable is not in variables, set it to zero
         break;
 
       case 'b':
