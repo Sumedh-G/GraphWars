@@ -5,8 +5,8 @@ CMakeFiles/GraphWars.dir/src/entity.c.o: /home/crownedhog/projects/GraphWars/src
   /home/crownedhog/projects/GraphWars/src/entity.h \
   /usr/include/raylib.h \
   /usr/include/stdc-predef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdbool.h
 
 CMakeFiles/GraphWars.dir/src/functions.c.o: /home/crownedhog/projects/GraphWars/src/functions.c \
   /home/crownedhog/projects/GraphWars/src/functions.h \
@@ -66,17 +66,26 @@ CMakeFiles/GraphWars.dir/src/functions.c.o: /home/crownedhog/projects/GraphWars/
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/float.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/float.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h
 
 CMakeFiles/GraphWars.dir/src/main.c.o: /home/crownedhog/projects/GraphWars/src/main.c \
   /home/crownedhog/projects/GraphWars/src/entity.h \
   /home/crownedhog/projects/GraphWars/src/tiles.h \
   /home/crownedhog/projects/GraphWars/src/utils.h \
+  /usr/include/assert.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
   /usr/include/raylib.h \
   /usr/include/stdc-predef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h
+  /usr/include/sys/cdefs.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdbool.h
 
 CMakeFiles/GraphWars.dir/src/tiles.c.o: /home/crownedhog/projects/GraphWars/src/tiles.c \
   /usr/include/stdc-predef.h
@@ -86,15 +95,15 @@ CMakeFiles/GraphWars.dir/src/utils.c.o: /home/crownedhog/projects/GraphWars/src/
   /home/crownedhog/projects/GraphWars/src/utils.h \
   /usr/include/raylib.h \
   /usr/include/stdc-predef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdbool.h
 
 GraphWars: /usr/lib/Scrt1.o \
   /usr/lib/crti.o \
   /usr/lib/crtn.o \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/libgcc.a \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtendS.o \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/libgcc.a \
   /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib/libc.so \
   /usr/lib/libc.so.6 \
@@ -130,9 +139,7 @@ CMakeFiles/GraphWars.dir/src/entity.c.o:
 
 /usr/lib/ld-linux-x86-64.so.2:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/libgcc.a:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o:
 
 /usr/lib/crtn.o:
 
@@ -143,6 +150,10 @@ CMakeFiles/GraphWars.dir/src/entity.c.o:
 /home/crownedhog/projects/GraphWars/src/utils.c:
 
 /home/crownedhog/projects/GraphWars/src/tiles.c:
+
+/usr/include/assert.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/float.h:
 
 /usr/include/sys/types.h:
 
@@ -158,19 +169,17 @@ CMakeFiles/GraphWars.dir/src/entity.c.o:
 
 /usr/include/features-time64.h:
 
-/usr/include/bits/mathcalls-macros.h:
+/usr/include/bits/long-double.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtendS.o:
+/usr/include/bits/fp-logb.h:
+
+/usr/include/bits/mathcalls-macros.h:
 
 /home/crownedhog/projects/GraphWars/src/main.c:
 
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/libc-header-start.h:
-
-/usr/include/bits/fp-logb.h:
-
-/usr/include/bits/long-double.h:
 
 /usr/lib/libc.so:
 
@@ -198,15 +207,19 @@ CMakeFiles/GraphWars.dir/src/entity.c.o:
 
 /home/crownedhog/projects/GraphWars/src/functions.c:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdbool.h:
+/usr/include/bits/struct_mutex.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtendS.o:
+
+/usr/include/gnu/stubs-64.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/libgcc.a:
 
 /usr/include/bits/stdint-intn.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/float.h:
-
 /home/crownedhog/projects/GraphWars/src/entity.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdarg.h:
 
 /usr/include/stdc-predef.h:
 
@@ -242,15 +255,11 @@ CMakeFiles/GraphWars.dir/src/functions.c.o:
 
 /usr/include/bits/types/sigset_t.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h:
-
-/usr/include/bits/struct_mutex.h:
-
-/usr/include/gnu/stubs-64.h:
-
 /usr/include/bits/thread-shared-types.h:
 
 /usr/lib/libc_nonshared.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stdbool.h:
 
 /usr/include/bits/types.h:
 
@@ -277,6 +286,8 @@ CMakeFiles/GraphWars.dir/src/main.c.o:
 /usr/include/bits/types/time_t.h:
 
 /usr/include/stdlib.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h:
 
 /usr/include/bits/time64.h:
 

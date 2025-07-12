@@ -1,7 +1,7 @@
 CMakeFiles/GraphWars.dir/src/functions.c.o: \
  /home/crownedhog/projects/GraphWars/src/functions.c \
  /usr/include/stdc-predef.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/float.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/float.h \
  /usr/include/math.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
@@ -15,7 +15,7 @@ CMakeFiles/GraphWars.dir/src/functions.c.o: \
  /usr/include/bits/mathcalls-macros.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/stdlib.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/include/stddef.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
  /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
