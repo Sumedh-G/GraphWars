@@ -1,0 +1,3 @@
+/home/crownedhog/projects/GraphWars/build/CMakeFiles/GraphWars.dir
+/home/crownedhog/projects/GraphWars/build/CMakeFiles/edit_cache.dir
+/home/crownedhog/projects/GraphWars/build/CMakeFiles/rebuild_cache.dir
