@@ -129,54 +129,6 @@ GraphWars/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/build
 .PHONY : GraphWars/fast
 
-src/entity.o: src/entity.c.o
-.PHONY : src/entity.o
-
-# target to build an object file
-src/entity.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/entity.c.o
-.PHONY : src/entity.c.o
-
-src/entity.i: src/entity.c.i
-.PHONY : src/entity.i
-
-# target to preprocess a source file
-src/entity.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/entity.c.i
-.PHONY : src/entity.c.i
-
-src/entity.s: src/entity.c.s
-.PHONY : src/entity.s
-
-# target to generate assembly for a file
-src/entity.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/entity.c.s
-.PHONY : src/entity.c.s
-
-src/functions.o: src/functions.c.o
-.PHONY : src/functions.o
-
-# target to build an object file
-src/functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/functions.c.o
-.PHONY : src/functions.c.o
-
-src/functions.i: src/functions.c.i
-.PHONY : src/functions.i
-
-# target to preprocess a source file
-src/functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/functions.c.i
-.PHONY : src/functions.c.i
-
-src/functions.s: src/functions.c.s
-.PHONY : src/functions.s
-
-# target to generate assembly for a file
-src/functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/functions.c.s
-.PHONY : src/functions.c.s
-
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -201,53 +153,29 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/main.c.s
 .PHONY : src/main.c.s
 
-src/tiles.o: src/tiles.c.o
-.PHONY : src/tiles.o
+src/map.o: src/map.c.o
+.PHONY : src/map.o
 
 # target to build an object file
-src/tiles.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/tiles.c.o
-.PHONY : src/tiles.c.o
+src/map.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/map.c.o
+.PHONY : src/map.c.o
 
-src/tiles.i: src/tiles.c.i
-.PHONY : src/tiles.i
-
-# target to preprocess a source file
-src/tiles.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/tiles.c.i
-.PHONY : src/tiles.c.i
-
-src/tiles.s: src/tiles.c.s
-.PHONY : src/tiles.s
-
-# target to generate assembly for a file
-src/tiles.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/tiles.c.s
-.PHONY : src/tiles.c.s
-
-src/utils.o: src/utils.c.o
-.PHONY : src/utils.o
-
-# target to build an object file
-src/utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/utils.c.o
-.PHONY : src/utils.c.o
-
-src/utils.i: src/utils.c.i
-.PHONY : src/utils.i
+src/map.i: src/map.c.i
+.PHONY : src/map.i
 
 # target to preprocess a source file
-src/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/utils.c.i
-.PHONY : src/utils.c.i
+src/map.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/map.c.i
+.PHONY : src/map.c.i
 
-src/utils.s: src/utils.c.s
-.PHONY : src/utils.s
+src/map.s: src/map.c.s
+.PHONY : src/map.s
 
 # target to generate assembly for a file
-src/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/utils.c.s
-.PHONY : src/utils.c.s
+src/map.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/src/map.c.s
+.PHONY : src/map.c.s
 
 # Help Target
 help:
@@ -258,21 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GraphWars"
-	@echo "... src/entity.o"
-	@echo "... src/entity.i"
-	@echo "... src/entity.s"
-	@echo "... src/functions.o"
-	@echo "... src/functions.i"
-	@echo "... src/functions.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/tiles.o"
-	@echo "... src/tiles.i"
-	@echo "... src/tiles.s"
-	@echo "... src/utils.o"
-	@echo "... src/utils.i"
-	@echo "... src/utils.s"
+	@echo "... src/map.o"
+	@echo "... src/map.i"
+	@echo "... src/map.s"
 .PHONY : help
 
 

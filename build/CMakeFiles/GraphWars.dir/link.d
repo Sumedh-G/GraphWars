@@ -3,10 +3,7 @@ GraphWars: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.1.1/crtbeginS.o \
   CMakeFiles/GraphWars.dir/src/main.c.o \
-  CMakeFiles/GraphWars.dir/src/entity.c.o \
-  CMakeFiles/GraphWars.dir/src/functions.c.o \
-  CMakeFiles/GraphWars.dir/src/utils.c.o \
-  CMakeFiles/GraphWars.dir/src/tiles.c.o \
+  CMakeFiles/GraphWars.dir/src/map.c.o \
   /usr/lib/libraylib.so \
   /usr/lib/libm.so \
   /usr/lib/libm.so \
@@ -45,13 +42,7 @@ GraphWars: \
 
 CMakeFiles/GraphWars.dir/src/main.c.o:
 
-CMakeFiles/GraphWars.dir/src/entity.c.o:
-
-CMakeFiles/GraphWars.dir/src/functions.c.o:
-
-CMakeFiles/GraphWars.dir/src/utils.c.o:
-
-CMakeFiles/GraphWars.dir/src/tiles.c.o:
+CMakeFiles/GraphWars.dir/src/map.c.o:
 
 /usr/lib/libraylib.so:
 
