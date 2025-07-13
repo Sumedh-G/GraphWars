@@ -1,9 +1,9 @@
 {
 	"nodes":[
-		{"id":"7f18ef75ea15b10b","x":-29,"y":-240,"width":300,"height":60,"type":"text","text":"# Map Generation"},
-		{"id":"9df4f9f08d9d6312","x":-680,"y":47,"width":457,"height":505,"type":"text","text":"1. Storing a tile-map\n\nTile:\n\tA set of images grid governed by internal state\n\nTile Set:\n     A group of tiles of the same type.\n\nTile Map:\n     The group of all tile-sets used to create a map which the player can interact with.\n\nMap:\n     A struct that contains its own tile-map, along with the grid that defines the tiles in the tile-map, the hash of all of the tile positions."},
-		{"id":"fe91f289b4a0f01e","x":-80,"y":47,"width":250,"height":57,"type":"text","text":"2. Generate tile positions"},
-		{"id":"11b93bd4bca4f6a8","x":320,"y":47,"width":250,"height":60,"type":"text","text":"3. Render using auto-tiling"}
+		{"id":"7f18ef75ea15b10b","type":"text","text":"# Map Generation","x":-29,"y":-240,"width":300,"height":60},
+		{"id":"9df4f9f08d9d6312","type":"text","text":"1. Storing a tile-map\n\nTile:\n\tA set of images grid governed by internal state\n\nTile Set:\n     A group of tiles of the same type.\n\nTile Map:\n     The group of all tile-sets used to create a map which the player can interact with.\n\nMap:\n     A struct that contains its own tile-map, along with the grid that defines the tiles in the tile-map, the hash of all of the tile positions.","x":-680,"y":47,"width":457,"height":505},
+		{"id":"11b93bd4bca4f6a8","type":"text","text":"3. Render using auto-tiling","x":320,"y":47,"width":250,"height":60},
+		{"id":"fe91f289b4a0f01e","type":"text","text":"2. Generate tile positions\n\n","x":-160,"y":47,"width":400,"height":505}
 	],
 	"edges":[
 		{"id":"fde9ff5bd32be3cc","fromNode":"7f18ef75ea15b10b","fromSide":"bottom","toNode":"9df4f9f08d9d6312","toSide":"top"},

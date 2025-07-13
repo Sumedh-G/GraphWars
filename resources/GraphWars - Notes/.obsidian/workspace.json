@@ -6,7 +6,7 @@
       {
         "id": "1232b5cc04c219e9",
         "type": "tabs",
-        "dimension": 56.98924731182796,
+        "dimension": 82.60162601626017,
         "children": [
           {
             "id": "c92f9e329728d457",
@@ -30,9 +30,9 @@
               "state": {
                 "file": "Map Generation.canvas",
                 "viewState": {
-                  "x": -428.4299679011662,
-                  "y": 321.1239433393097,
-                  "zoom": -1.1102230246251565e-16
+                  "x": 50.318922845960195,
+                  "y": 164.1138300065456,
+                  "zoom": -0.5753673538488229
                 }
               },
               "icon": "lucide-layout-dashboard",
@@ -45,7 +45,7 @@
       {
         "id": "feb211f9617a3022",
         "type": "tabs",
-        "dimension": 43.01075268817204,
+        "dimension": 17.398373983739837,
         "children": [
           {
             "id": "bd6898497d719737",
@@ -114,7 +114,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "55c5276bc5bee0b6",
@@ -204,10 +205,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0560e4cae4f30449",
+  "active": "bd6898497d719737",
   "lastOpenFiles": [
-    "Idea Hub.md",
     "Map Generation.canvas",
+    "Idea Hub.md",
     "Untitled.md",
     "Map Generation/Tileing.md",
     "Map Generation",

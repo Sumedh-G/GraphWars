@@ -85,12 +85,12 @@ clean: CMakeFiles/GraphWars.dir/clean
 CMakeFiles/GraphWars.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/crownedhog/projects/GraphWars/build/CMakeFiles --progress-num=1,2,3 "Built target GraphWars"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/crownedhog/projects/GraphWars/build/CMakeFiles --progress-num=1,2,3,4 "Built target GraphWars"
 .PHONY : CMakeFiles/GraphWars.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GraphWars.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/crownedhog/projects/GraphWars/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crownedhog/projects/GraphWars/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GraphWars.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/crownedhog/projects/GraphWars/build/CMakeFiles 0
 .PHONY : CMakeFiles/GraphWars.dir/rule
@@ -102,7 +102,7 @@ GraphWars: CMakeFiles/GraphWars.dir/rule
 # codegen rule for target.
 CMakeFiles/GraphWars.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphWars.dir/build.make CMakeFiles/GraphWars.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/crownedhog/projects/GraphWars/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target GraphWars"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/crownedhog/projects/GraphWars/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target GraphWars"
 .PHONY : CMakeFiles/GraphWars.dir/codegen
 
 # clean rule for target.

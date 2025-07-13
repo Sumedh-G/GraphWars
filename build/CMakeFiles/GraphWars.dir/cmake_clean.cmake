@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/GraphWars.dir/src/main.c.o.d"
   "CMakeFiles/GraphWars.dir/src/map.c.o"
   "CMakeFiles/GraphWars.dir/src/map.c.o.d"
+  "CMakeFiles/GraphWars.dir/src/utils.c.o"
+  "CMakeFiles/GraphWars.dir/src/utils.c.o.d"
   "GraphWars"
   "GraphWars.pdb"
 )

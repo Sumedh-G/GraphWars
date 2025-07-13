@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/crownedhog/projects/GraphWars/src/main.c" "CMakeFiles/GraphWars.dir/src/main.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/main.c.o.d"
   "/home/crownedhog/projects/GraphWars/src/map.c" "CMakeFiles/GraphWars.dir/src/map.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/map.c.o.d"
+  "/home/crownedhog/projects/GraphWars/src/utils.c" "CMakeFiles/GraphWars.dir/src/utils.c.o" "gcc" "CMakeFiles/GraphWars.dir/src/utils.c.o.d"
   "" "GraphWars" "gcc" "CMakeFiles/GraphWars.dir/link.d"
   )
 

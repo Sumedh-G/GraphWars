@@ -10,5 +10,11 @@
   "command": "/usr/bin/cc -DBASE_PATH=\\\"/home/crownedhog/projects/GraphWars\\\"  -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/map.c.o -c /home/crownedhog/projects/GraphWars/src/map.c",
   "file": "/home/crownedhog/projects/GraphWars/src/map.c",
   "output": "CMakeFiles/GraphWars.dir/src/map.c.o"
+},
+{
+  "directory": "/home/crownedhog/projects/GraphWars/build",
+  "command": "/usr/bin/cc -DBASE_PATH=\\\"/home/crownedhog/projects/GraphWars\\\"  -std=gnu11 -I/usr/include -o CMakeFiles/GraphWars.dir/src/utils.c.o -c /home/crownedhog/projects/GraphWars/src/utils.c",
+  "file": "/home/crownedhog/projects/GraphWars/src/utils.c",
+  "output": "CMakeFiles/GraphWars.dir/src/utils.c.o"
 }
 ]
