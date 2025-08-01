@@ -12,33 +12,33 @@
 
 void CustomLog(int msgType, const char *text, va_list args)
 {
-  char timeStr[64] = { 0 };
-  time_t now = time(NULL);
-  struct tm *tm_info = localtime(&now);
+    char timeStr[64] = { 0 };
+    time_t now = time(NULL);
+    struct tm *tm_info = localtime(&now);
 
-  strftime(timeStr, sizeof(timeStr), "[%H:%M:%S] %h %d, %Y", tm_info);
+    strftime(timeStr, sizeof(timeStr), "[%H:%M:%S] %h %d, %Y", tm_info);
 
-  switch (msgType)
-  {
-    case LOG_INFO:    printf("[" ANSI_BLUE    "INFO"  ANSI_RESET "] : "); break;
-    case LOG_ERROR:   printf("[" ANSI_RED     "ERROR" ANSI_RESET "]: "); break;
-    case LOG_WARNING: printf("[" ANSI_YELLOW  "WARN"  ANSI_RESET "] : "); break;
-    case LOG_DEBUG:   printf("[" ANSI_MAGENTA "DEBUG" ANSI_RESET "]: "); break;
-    default: break;
-  }
+    switch (msgType)
+    {
+        case LOG_INFO:    printf("[" ANSI_BLUE    "INFO"  ANSI_RESET "] : "); break;
+        case LOG_ERROR:   printf("[" ANSI_RED     "ERROR" ANSI_RESET "]: "); break;
+        case LOG_WARNING: printf("[" ANSI_YELLOW  "WARN"  ANSI_RESET "] : "); break;
+        case LOG_DEBUG:   printf("[" ANSI_MAGENTA "DEBUG" ANSI_RESET "]: "); break;
+        default: break;
+    }
 
-  int n = vprintf(text, args);
+    int n = vprintf(text, args);
 
-  printf(" %*s ", 135-n, timeStr);
-  printf("\n");
+    printf(" %*s ", 135-n, timeStr);
+    printf("\n");
 }
 
 void WriteLog(int msgType, const char *format_string, ...)
 {
-  va_list args;
-  va_start(args, format_string);
-  CustomLog(msgType, format_string, args);
-  va_end(args);
+    va_list args;
+    va_start(args, format_string);
+    CustomLog(msgType, format_string, args);
+    va_end(args);
 
-  return;
+    return;
 }
